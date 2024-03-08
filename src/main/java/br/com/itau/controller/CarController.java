@@ -51,15 +51,7 @@ public class CarController {
         if (!CarStatusEnum.isValidCarStatus(carFromClient.getStatus())) {
             throw new RuntimeException("Status de carro inválido!");
         }
-        Car existingCar = optionalCar.get();
-        existingCar.setStatus(carFromClient.getStatus());
-        existingCar.setPlaca(carFromClient.getPlaca());
-        existingCar.setName(carFromClient.getName());
-        existingCar.setManufacturer(carFromClient.getManufacturer());
-        existingCar.setColor(carFromClient.getColor());
-        existingCar.setChassi(carFromClient.getChassi());
-        existingCar.setCarYear(carFromClient.getCarYear());
-
+        Car existingCar = carFromClient;
         carRepository.save(existingCar);
         CarDto carDto = new CarDto(existingCar);
         return carDto;

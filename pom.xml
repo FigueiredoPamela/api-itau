@@ -10,7 +10,7 @@
     </parent>
     <groupId>itau.com.br</groupId>
     <artifactId>api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>itau</version>
     <name>ProjectApi</name>
     <description>Api de teste para vaga de Tech Lead</description>
     <properties>
